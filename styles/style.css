@@ -10,6 +10,7 @@ body {
     no-repeat;
   background: -moz-linear-gradient(113.49deg, #984d38 -30.3%, #181e41 58.12%)
     no-repeat;
+  position: relative;
 }
 
 a {
@@ -36,6 +37,20 @@ p {
 
 .container {
   margin: 0 15px;
+}
+
+.back {
+  position: relative;
+}
+
+.back__top {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  z-index: 9;
+  font-size: 50px;
+  width: 30px;
+  height: 30px;
 }
 
 .header {
@@ -204,6 +219,31 @@ p {
   margin-bottom: 146px;
 }
 
+.error-page {
+  display: flex;
+  justify-content: center;
+  margin: 90px 0;
+  font-size: 25px;
+  color: #fff;
+}
+
+.error-page__button {
+  display: block;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(214.02deg, #b75cff 6.04%, #671ae4 92.95%);
+  background: -webkit-linear-gradient(214.02deg, #b75cff 6.04%, #671ae4 92.95%);
+  background: -moz-linear-gradient(214.02deg, #b75cff 6.04%, #671ae4 92.95%);
+  padding: 20px 50px;
+}
+
+.error-page__button:hover {
+  background: linear-gradient(45deg, #875cff 33%, #671ae4 60%);
+  background: -webkit-linear-gradient(45deg, #875cff 33%, #671ae4 60%);
+  background: -moz-linear-gradient(45deg, #875cff 33%, #671ae4 60%);
+  text-shadow: 2px 5px 4px #000;
+}
+
 .artworks {
   margin-bottom: 140px;
 }
@@ -331,7 +371,7 @@ p {
   display: block;
   position: absolute;
   width: 100%;
-  height: 55px;
+  height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   top: 0;
