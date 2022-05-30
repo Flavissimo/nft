@@ -3,7 +3,7 @@ const menuElement = document.querySelector(".header__menu");
 const menuList = document.querySelector(".header__list");
 
 for (let i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click",  () => {
+  coll[i].addEventListener("click", () => {
     coll[i].classList.toggle("active");
     const content = coll[i].nextElementSibling;
     if (content.style.maxHeight) {
@@ -18,3 +18,16 @@ menuElement.addEventListener("click", function () {
   menuElement.classList.toggle("toggle");
   menuList.classList.toggle("toggle");
 });
+
+window.addEventListener("scroll", function () {
+  const scroll = document.querySelector(".buttonTop");
+  scroll.classList.toggle("active", window.scrollY > 500);
+  /*console.log(scroll);*/
+});
+
+function scrollTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
