@@ -1,6 +1,7 @@
 const coll = document.querySelectorAll(".faq__collapsable");
 const menuElement = document.querySelector(".header__menu");
 const menuList = document.querySelector(".header__list");
+const buttonScrollTop = document.querySelector(".buttonTop");
 
 for (let i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", () => {
@@ -25,9 +26,9 @@ window.addEventListener("scroll", function () {
   /*console.log(scroll);*/
 });
 
-function scrollTop() {
+buttonScrollTop.addEventListener("click", function scrollTop() {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
-}
+});
